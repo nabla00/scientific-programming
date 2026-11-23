@@ -9,6 +9,3 @@ Course project site, published with GitHub Pages.
 
 ## Edit
 Replace the placeholder text (YOUR PROJECT TITLE, Your Name, example items) in the five `.html` files, and drop your real files in the matching folders.
-
-## Code page
-`code.html` lists every `.py` and `.ipynb` file under `code/` automatically, grouped by folder. Add a folder such as `code/lab3/`, put files in it, and push. Do not add a `.nojekyll` file, because it turns this feature off.
