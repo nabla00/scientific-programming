@@ -11,8 +11,4 @@ Course project site, published with GitHub Pages.
 Replace the placeholder text (YOUR PROJECT TITLE, Your Name, example items) in the five `.html` files, and drop your real files in the matching folders.
 
 ## Code page
-Each folder inside `code/` is one laboratory: a Python project with a `main.py`. `code.html` lists every lab automatically, shows its files, and renders its `main.py`. To add a lab, create a folder such as `code/lab3/`, put the project inside, and push.
-
-On the Numerical Problems page, link a problem to its lab with `code.html#lab3` (the folder name after the `#`).
-
-Do not add a `.nojekyll` file, because it turns the automatic listing off.
+Zip each laboratory's Python project folder (for example `lab1.zip`) and put it in `code/`. Each entry in `code.html` links to its ZIP. On the Numerical Problems page, a problem's code link points to the entry with `code.html#lab1`.

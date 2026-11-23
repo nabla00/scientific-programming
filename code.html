@@ -1,5 +1,3 @@
----
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +8,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" media="(prefers-color-scheme: light)" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
-<link rel="stylesheet" media="(prefers-color-scheme: dark)" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
 </head>
 <body>
 <header><div class="wrap">
@@ -21,43 +17,24 @@
 </div></header>
 <main><div class="wrap">
 <h1>Code</h1>
-<p class="lead">Each laboratory is a Python project in its own folder. Click a lab to see its files and its <code>main.py</code>.</p>
-{% assign repo = site.github.repository_url %}
-{% assign branch = site.github.source.branch | default: "main" %}
-{% assign allfiles = site.static_files | where_exp: "f", "f.path contains '/code/'" | where_exp: "f", "f.extname == '.py' or f.extname == '.ipynb'" %}
-{% assign labs = allfiles | group_by_exp: "f", "f.path | remove_first: '/code/' | split: '/' | first" | sort: "name" %}
-{% for lab in labs %}{% unless lab.name contains "." %}
-{% assign expected = "/code/" | append: lab.name | append: "/main.py" %}
-{% assign main = lab.items | where_exp: "f", "f.path == expected" | first %}
-{% assign files = lab.items | sort: "path" %}
-<details class="lab" id="{{ lab.name | slugify }}"{% if main %} data-src="{{ main.path | relative_url }}"{% endif %}>
-<summary><span>{{ lab.name }}</span><span class="count">{{ files.size }} file{% if files.size != 1 %}s{% endif %}</span></summary>
-<div class="lab-body">
-<p class="meta">Project files</p>
-<ul class="files">
-{% for f in files %}
-<li><a href="{% if repo %}{{ repo }}/blob/{{ branch }}{{ f.path }}{% else %}{{ f.path | relative_url }}{% endif %}">{{ f.path | remove_first: "/code/" | remove_first: lab.name | remove_first: "/" }}</a></li>
-{% endfor %}
+<p class="lead">One entry per laboratory. Each download is the complete Python project for that lab.</p>
+<ul class="items">
+<li id="lab1">
+<h3>Lab 1</h3>
+<p>What this lab covers and what its main.py does.</p>
+<div class="links"><a href="code/lab1.zip" download>Download project folder (ZIP)</a></div>
+</li>
+<li id="lab2">
+<h3>Lab 2</h3>
+<p>What this lab covers and what its main.py does.</p>
+<div class="links"><a href="code/lab2.zip" download>Download project folder (ZIP)</a></div>
+</li>
 </ul>
-{% if repo %}<p><a href="{{ repo }}/tree/{{ branch }}/code/{{ lab.name }}">Open project folder on GitHub</a></p>{% endif %}
-{% if main %}
-<p class="meta">main.py</p>
-<pre><code class="language-python">Loading...</code></pre>
-{% else %}
-<p class="todo">No main.py found in this folder.</p>
-{% endif %}
-</div>
-</details>
-{% endunless %}{% else %}
-<p class="todo">No code yet. Add a folder such as <code>code/lab1/</code> containing your Python project.</p>
-{% endfor %}
-<noscript><p class="todo">Rendering main.py needs JavaScript. Use the file links inside each lab instead.</p></noscript>
 <h2>How to run</h2>
-<pre><code>pip install -r code/requirements.txt
-python code/lab1/main.py</code></pre>
-<p class="todo">The full repository is on <a href="https://github.com/YOUR-USERNAME/YOUR-REPO">GitHub</a>.</p>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-<script src="js/code.js"></script>
+<pre><code>unzip lab1.zip
+cd lab1
+python main.py</code></pre>
+<p class="todo">To add a lab: zip the project folder (for example <code>lab3.zip</code>), put it in the <code>code/</code> folder, then copy one &lt;li&gt; block above and change its id, text and link. The full repository is on <a href="https://github.com/YOUR-USERNAME/YOUR-REPO">GitHub</a>.</p>
 </div></main>
 <footer><div class="wrap">Scientific Programming course project by Your Name.</div></footer>
 </body>
