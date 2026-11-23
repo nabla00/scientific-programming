@@ -3,6 +3,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
 from sklearn.dummy import DummyRegressor
 from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.pipeline import Pipeline
 
 def open_data_file(file_name):
     data_file = pl.read_csv(file_name)
@@ -73,6 +75,50 @@ def fit_linear_line_full(feature):
 
     return (slope, intercept, prediction, mae)
 
+def fit_polynomial_line(feature, degree=2):
+    features_train = pl.read_csv("datasets/features_training.csv")
+    features_test = pl.read_csv("datasets/features_test.csv")
+    target_train = pl.read_csv("datasets/target_training.csv")
+    target_test = pl.read_csv("datasets/target_test.csv")
+
+    model = Pipeline([
+        ("polynomial", PolynomialFeatures(degree=degree, include_bias=False)),
+        ("linear", LinearRegression())
+    ])
+    model.fit(features_train.select(feature), target_train)
+   
+    prediction = model.predict(features_test.select(feature))
+    mae = mean_absolute_error(target_test["PE"], prediction)
+
+    polynomial = model.named_steps["polynomial"]
+    linear = model.named_steps["linear"]
+    coefficients = linear.coef_
+    intercept = linear.intercept_
+    
+    return (polynomial, linear, coefficients, intercept, prediction, mae)
+
+def fit_polynomial_line_full(feature, degree=2):
+    features_train = pl.read_csv("datasets/full/features_training.csv")
+    features_test = pl.read_csv("datasets/full/features_test.csv")
+    target_train = pl.read_csv("datasets/full/target_training.csv")
+    target_test = pl.read_csv("datasets/full/target_test.csv")
+    
+    model = Pipeline([
+        ("polynomial", PolynomialFeatures(degree=degree, include_bias=False)),
+        ("linear", LinearRegression())
+    ])
+    model.fit(features_train.select(feature), target_train)
+
+    prediction = model.predict(features_test.select(feature))
+    mae = mean_absolute_error(target_test["PE"], prediction)
+
+    polynomial = model.named_steps["polynomial"]
+    linear = model.named_steps["linear"]
+    coefficients = linear.coef_
+    intercept = linear.intercept_
+
+    return (polynomial, linear, coefficients, intercept, prediction, mae)
+
 def hand_calculation():
     # Running the Calculation by Hand; Code is purely for checking.
     # Slope = -1.1681030017072855
@@ -118,6 +164,12 @@ create_datasets_keep_duplicates("datasets/full/ccpp.csv", 42)
 slope, intercept = slope[0], intercept[0]
 slope_full, intercept_full = slope_full[0], intercept_full[0]
 
+(polynomial2, linear2, polynomial2_coefficients, polynomial2_intercept, polynomial2_prediction, polynomial2_mae) = fit_polynomial_line("V", degree=2)
+(polynomial2_full, linear2_full, polynomial2_coefficients_full, polynomial2_intercept_full, polynomial2_prediction_full, polynomial2_mae_full) = fit_polynomial_line_full("V", degree=2)
+
+(polynomial3, linear3, polynomial3_coefficients, polynomial3_intercept, polynomial3_prediction, polynomial3_mae) = fit_polynomial_line("V", degree=3)
+(polynomial3_full, linear3_full, polynomial3_coefficients_full, polynomial3_intercept_full, polynomial3_prediction_full, polynomial3_mae_full) = fit_polynomial_line_full("V", degree=3)
+
 print("## Linear Regression - Duplicates Removed ##")
 print("Model Slope:", slope)
 print("Model Intercept:", intercept)
@@ -136,4 +188,38 @@ print()
 
 print("## Hand Calculation Check Run ##")
 hand_calculation()
+
+print()
+print()
+
+print("## Polynomial Regression - Duplicates Removed - 2nd Degree ##")
+print("Intercept:", polynomial2_intercept)
+print("Coefficients:", polynomial2_coefficients)
+print("MAE:", polynomial2_mae)
+
+print()
+print()
+
+print("## Polynomial Regression - Duplicates Kept - 2nd Degree ##")
+print("Intercept:", polynomial2_intercept_full)
+print("Coefficients:", polynomial2_coefficients_full)
+print("MAE:", polynomial2_mae_full)
+
+print()
+print()
+
+print("## Polynomial Regression - Duplicates Removed - 3rd Degree ##")
+print("Intercept:", polynomial3_intercept)
+print("Coefficients:", polynomial3_coefficients)
+print("MAE:", polynomial3_mae)
+
+print()
+print()
+
+print("## Polynomial Regression - Duplicates Kept - 3rd Degree ##")
+print("Intercept:", polynomial3_intercept_full)
+print("Coefficients:", polynomial3_coefficients_full)
+print("MAE:", polynomial3_mae_full)
+
+
 
