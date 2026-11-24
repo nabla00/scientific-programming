@@ -1,56 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home | Scientific Programming</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <header>
-      <div class="wrap">
-        <div class="brand">
-          <h1 class="site-title">Scientific Programming</h1>
-          <p class="course">Beraat Durmaz &middot; 2026-2027 Fall</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main | Course Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- EDIT: Replace with your course code or short site title -->
+      <a class="site-title" href="index.html">[Course Code] Portfolio</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html" aria-current="page">Main</a>
+        <a href="numerical.html">Numerical Problem</a>
+        <a href="data-model.html">Data &amp; Model</a>
+        <a href="presentation.html">Presentation</a>
+        <a href="code-statement.html">Code &amp; Statement</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <p class="page-kicker">[Department / University Name]</p>
+      <!-- EDIT: Replace with your course title and short project subtitle -->
+      <h1>[Course Code]: [Course Title]</h1>
+      <p class="page-subtitle">[Term / Academic Year] &mdash; Course project and portfolio site.</p>
+    </section>
+
+    <section aria-labelledby="student-info-heading">
+      <h2 id="student-info-heading">Student Information</h2>
+      <!-- EDIT: Fill in your identifying details below -->
+      <div class="info-grid">
+        <div class="info-item">
+          <span class="info-label">Name</span>
+          <span class="info-value">[Your Full Name]</span>
         </div>
-        <nav aria-label="Main">
-          <a href="index.html" aria-current="page">Home</a>
-          <a href="numerical-problems.html">Numerical Problems</a>
-          <a href="data-and-models.html">Data and Models</a>
-          <a href="presentation.html">Presentation</a>
-          <a href="code.html">Code</a>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <div class="wrap">
-        <h1>About the site</h1>
-        <p class="lead">This site is a small site containing all the material used and produced during the laboratory sessions and the project of the Scientific Programming course of IKCU.</p>
-        <div class="sections">
-          <a href="numerical-problems.html">
-            <strong>Numerical Problems</strong>
-            <span>Solve problems, with statements and solutions.</span>
-          </a>
-          <a href="data-and-models.html">
-            <strong>Data and Models</strong>
-            <span>Datasets and already trained models.</span>
-          </a>
-          <a href="presentation.html">
-            <strong>Presentation</strong>
-            <span>Slides and any supporting files.</span>
-          </a>
-          <a href="code.html">
-            <strong>Code</strong>
-            <span>The code behind the models, provided as zip files.</span>
-          </a>
+        <div class="info-item">
+          <span class="info-label">Student ID</span>
+          <span class="info-value">[Your Student ID]</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Department</span>
+          <span class="info-value">Electrical and Electronics Engineering</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">University</span>
+          <span class="info-value">[University Name]</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Course &amp; Section</span>
+          <span class="info-value">[Course Code &mdash; Section]</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Contact / GitHub</span>
+          <span class="info-value"><a href="mailto:[your.email@university.edu]">[your.email@university.edu]</a></span>
         </div>
       </div>
-    </main>
-    <footer>
-      <div class="wrap">Scientific Programming · Beraat Durmaz.</div>
-    </footer>
-  </body>
+    </section>
+
+    <section aria-labelledby="pages-heading">
+      <h2 id="pages-heading">Site Pages</h2>
+      <div class="card-grid">
+        <a class="nav-card" href="numerical.html">
+          <span class="nav-card-num">01 / WEEKS 6&ndash;7</span>
+          <h3>Numerical Problem</h3>
+          <p>One EEE equation solved with a numerical method (Newton&ndash;Raphson, Jacobian, Euler, or Runge&ndash;Kutta) and verified with an independent check.</p>
+        </a>
+
+        <a class="nav-card" href="data-model.html">
+          <span class="nav-card-num">02 / WEEK 10</span>
+          <h3>Data and Model</h3>
+          <p>Week 10 method applied to a documented dataset, covering source, licence, data checks, split, baseline, and error evaluation.</p>
+        </a>
+
+        <a class="nav-card" href="presentation.html">
+          <span class="nav-card-num">03 / SLIDES</span>
+          <h3>Presentation</h3>
+          <p>Week 10 progress slides and the final course presentation, available to view inline or download as PDF.</p>
+        </a>
+
+        <a class="nav-card" href="code-statement.html">
+          <span class="nav-card-num">04 / REPRODUCIBILITY</span>
+          <h3>Code and Statement</h3>
+          <p>Source code repository, instructions to reproduce the results, references, and the AI-use disclosure statement.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <!-- EDIT: Replace with your name and term -->
+      <span>[Student Full Name] &middot; [Course Code &amp; Title]</span>
+      <span>Hosted on GitHub Pages</span>
+    </div>
+  </footer>
+</body>
 </html>

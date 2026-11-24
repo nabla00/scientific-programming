@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data and Model | Course Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Optional: uncomment the line below if you want LaTeX equations rendered with MathJax
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- EDIT: Replace with your course code or short site title -->
+      <a class="site-title" href="index.html">[Course Code] Portfolio</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Main</a>
+        <a href="numerical.html">Numerical Problem</a>
+        <a href="data-model.html" aria-current="page">Data &amp; Model</a>
+        <a href="presentation.html">Presentation</a>
+        <a href="code-statement.html">Code &amp; Statement</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <p class="page-kicker">Week 10</p>
+      <h1>Data and Model</h1>
+      <p class="page-subtitle">Week 10 method applied to a documented dataset with baseline and error analysis.</p>
+    </section>
+
+    <section aria-labelledby="dataset-heading">
+      <h2 id="dataset-heading">1. Documented Dataset</h2>
+      <!-- EDIT: Populate source, licence, checks, and split details -->
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Documentation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Source</strong></td>
+              <td>[Dataset title, author/organization, direct URL, and date accessed]</td>
+            </tr>
+            <tr>
+              <td><strong>Licence</strong></td>
+              <td>[Exact licence name, e.g., CC BY 4.0 / MIT / Public Domain, and attribution requirements]</td>
+            </tr>
+            <tr>
+              <td><strong>Size &amp; Features</strong></td>
+              <td>[Number of samples, input features, target variable, and units]</td>
+            </tr>
+            <tr>
+              <td><strong>Checks</strong></td>
+              <td>[Data quality checks performed: missing values, duplicates, physical range checks, outliers, class balance, leakage checks]</td>
+            </tr>
+            <tr>
+              <td><strong>Split</strong></td>
+              <td>[Train / validation / test split ratios, random seed, and grouping/time-order or stratification rules]</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="method-heading">
+      <h2 id="method-heading">2. Week 10 Method &amp; Baseline</h2>
+      <div class="panel">
+        <p><strong>Week 10 Method:</strong> [Name of your Week 10 model/method, preprocessing steps, and key hyperparameters]</p>
+        <p><strong>Baseline:</strong> [Definition of the simple baseline model, e.g., mean/median predictor, linear regression, or majority-class classifier]</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="error-heading">
+      <h2 id="error-heading">3. Error &amp; Evaluation</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th class="num">[Metric 1, e.g. MAE / Acc]</th>
+              <th class="num">[Metric 2, e.g. RMSE / F1]</th>
+              <th class="num">[Metric 3, e.g. R&sup2;]</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Baseline</td>
+              <td class="num">[value]</td>
+              <td class="num">[value]</td>
+              <td class="num">[value]</td>
+            </tr>
+            <tr>
+              <td>Week 10 Method</td>
+              <td class="num">[value]</td>
+              <td class="num">[value]</td>
+              <td class="num">[value]</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <figure>
+        <div class="figure-placeholder">
+          Place your evaluation plot in <code>assets/figures/model-error.png</code> and replace this box with:<br>
+          <code>&lt;img src="assets/figures/model-error.png" alt="Model evaluation and error plot"&gt;</code>
+        </div>
+        <figcaption>Figure 1: [Caption describing residuals, predicted vs. actual plot, or confusion matrix.]</figcaption>
+      </figure>
+
+      <h3>Error Analysis &amp; Limitations</h3>
+      <p class="placeholder">[Summarize where the model improves over the baseline, where the largest errors occur, and any dataset or modeling limitations.]</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <!-- EDIT: Replace with your name and term -->
+      <span>[Student Full Name] &middot; [Course Code &amp; Title]</span>
+      <span>Hosted on GitHub Pages</span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numerical Problem | Course Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Optional: uncomment the line below if you want LaTeX equations rendered with MathJax
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- EDIT: Replace with your course code or short site title -->
+      <a class="site-title" href="index.html">[Course Code] Portfolio</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Main</a>
+        <a href="numerical.html" aria-current="page">Numerical Problem</a>
+        <a href="data-model.html">Data &amp; Model</a>
+        <a href="presentation.html">Presentation</a>
+        <a href="code-statement.html">Code &amp; Statement</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <p class="page-kicker">Weeks 6&ndash;7</p>
+      <h1>Numerical Problem</h1>
+      <p class="page-subtitle">One EEE equation solved numerically with an independent verification check.</p>
+    </section>
+
+    <section aria-labelledby="equation-heading">
+      <h2 id="equation-heading">1. EEE Equation &amp; Problem Setup</h2>
+      <!-- EDIT: Describe the physical circuit/system and governing equation -->
+      <p class="placeholder">[Briefly describe the Electrical and Electronics Engineering system you are modeling, e.g., diode circuit operating point, nonlinear RLC transient, or power-flow bus equations.]</p>
+
+      <div class="equation-box">
+        <!-- EDIT: Replace with your governing equation (or LaTeX if MathJax is enabled) -->
+        [Governing Equation: e.g., f(x) = 0  or  dy/dt = g(t, y)]
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Symbol</th>
+              <th>Physical Meaning</th>
+              <th class="num">Value / Initial Condition</th>
+              <th>Units</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>[var_1]</code></td>
+              <td>[Parameter or state variable description]</td>
+              <td class="num">[value]</td>
+              <td>[units]</td>
+            </tr>
+            <tr>
+              <td><code>[var_2]</code></td>
+              <td>[Parameter or state variable description]</td>
+              <td class="num">[value]</td>
+              <td>[units]</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="method-heading">
+      <h2 id="method-heading">2. Numerical Method (Weeks 6&ndash;7)</h2>
+      <!-- EDIT: State which method you chose: Newton-Raphson, Jacobian, Euler, or Runge-Kutta -->
+      <div class="panel">
+        <p><strong>Selected Method:</strong> [Newton&ndash;Raphson / Jacobian / Euler / Runge&ndash;Kutta]</p>
+        <p><strong>Discretization / Tolerance:</strong> [Step size h, convergence tolerance &epsilon;, maximum iterations]</p>
+        <p><strong>Justification:</strong> <span class="placeholder">[Explain why this method fits the equation's linearity, stiffness, or dimensionality.]</span></p>
+      </div>
+    </section>
+
+    <section aria-labelledby="results-heading">
+      <h2 id="results-heading">3. Numerical Results</h2>
+      <!-- EDIT: Replace placeholder with your plot saved in assets/figures/ -->
+      <figure>
+        <div class="figure-placeholder">
+          Place your figure in <code>assets/figures/numerical-result.png</code> and replace this box with:<br>
+          <code>&lt;img src="assets/figures/numerical-result.png" alt="Numerical solution plot"&gt;</code>
+        </div>
+        <figcaption>Figure 1: [Caption describing the numerical solution or convergence curve.]</figcaption>
+      </figure>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Run / Step Size</th>
+              <th class="num">Iterations / Steps</th>
+              <th class="num">Computed Solution</th>
+              <th class="num">Residual / Error</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>[Run 1]</td>
+              <td class="num">[N]</td>
+              <td class="num">[value]</td>
+              <td class="num">[error]</td>
+            </tr>
+            <tr>
+              <td>[Run 2]</td>
+              <td class="num">[N]</td>
+              <td class="num">[value]</td>
+              <td class="num">[error]</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="check-heading">
+      <h2 id="check-heading">4. Independent Check</h2>
+      <!-- EDIT: Document your independent verification (analytical solution, reference solver, SPICE, or conservation check) -->
+      <p class="placeholder">[Describe how you verified your numerical result independently, e.g., closed-form analytical solution, SciPy/MATLAB reference solver, LTspice simulation, or grid-refinement / step-halving check.]</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Quantity</th>
+              <th class="num">Your Method</th>
+              <th class="num">Independent Check</th>
+              <th class="num">Absolute Error</th>
+              <th class="num">Relative Error</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>[Target output]</td>
+              <td class="num">[value]</td>
+              <td class="num">[reference]</td>
+              <td class="num">[abs_err]</td>
+              <td class="num">[rel_err %]</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <!-- EDIT: Replace with your name and term -->
+      <span>[Student Full Name] &middot; [Course Code &amp; Title]</span>
+      <span>Hosted on GitHub Pages</span>
+    </div>
+  </footer>
+</body>
+</html>

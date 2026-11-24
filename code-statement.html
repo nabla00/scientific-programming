@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code and Statement | Course Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- EDIT: Replace with your course code or short site title -->
+      <a class="site-title" href="index.html">[Course Code] Portfolio</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Main</a>
+        <a href="numerical.html">Numerical Problem</a>
+        <a href="data-model.html">Data &amp; Model</a>
+        <a href="presentation.html">Presentation</a>
+        <a href="code-statement.html" aria-current="page">Code &amp; Statement</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <p class="page-kicker">Reproducibility &amp; Academic Integrity</p>
+      <h1>Code and Statement</h1>
+      <p class="page-subtitle">Repository details, execution instructions, sources, and AI-use disclosure.</p>
+    </section>
+
+    <section aria-labelledby="repo-heading">
+      <h2 id="repo-heading">1. Repository</h2>
+      <div class="panel">
+        <!-- EDIT: Replace with your actual GitHub repository URL -->
+        <p><strong>GitHub Repository:</strong> <a href="https://github.com/[username]/[repository]" target="_blank" rel="noopener">https://github.com/[username]/[repository]</a></p>
+        <p><strong>Primary Language / Environment:</strong> [e.g., Python 3.11, NumPy, SciPy, scikit-learn, Matplotlib]</p>
+        <p><strong>Licence:</strong> [e.g., MIT Licence]</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="run-heading">
+      <h2 id="run-heading">2. How to Run It</h2>
+      <p>Clone the repository, install dependencies, and run the scripts for both the numerical problem and the Week 10 data model:</p>
+      <!-- EDIT: Update filenames and commands to match your repository -->
+      <pre><code>git clone https://github.com/[username]/[repository].git
+cd [repository]
+
+python3 -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+
+# 1) Run Weeks 6-7 numerical solver and independent check
+python3 src/numerical_problem.py
+
+# 2) Run Week 10 data checks, baseline, and model evaluation
+python3 src/data_model.py</code></pre>
+    </section>
+
+    <section aria-labelledby="sources-heading">
+      <h2 id="sources-heading">3. Sources &amp; References</h2>
+      <!-- EDIT: List all textbooks, course notes, datasets, papers, and software libraries used -->
+      <ol>
+        <li>[Course lecture notes / textbook citation for Weeks 6&ndash;7 numerical method]</li>
+        <li>[Dataset citation with author, year, URL, and licence]</li>
+        <li>[Course lecture notes / paper citation for Week 10 method]</li>
+        <li>[Software libraries and versions used, e.g., NumPy, SciPy, scikit-learn]</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="ai-heading">
+      <h2 id="ai-heading">4. AI-Use Statement</h2>
+      <!-- EDIT: Adjust this statement to accurately reflect your actual AI usage for the course -->
+      <div class="panel">
+        <p><strong>Tools Used:</strong> [e.g., Gemini, GitHub Copilot, ChatGPT — list exact tools and approximate dates]</p>
+        <p><strong>Scope of Use:</strong> [Describe specifically what AI assisted with, e.g., generating the initial static HTML/CSS template for this GitHub Pages site, debugging syntax errors, or proofreading explanations.]</p>
+        <p><strong>Verification &amp; Authorship:</strong> [State how you independently wrote, checked, and validated all equations, code, numerical results, dataset checks, and interpretations.]</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <!-- EDIT: Replace with your name and term -->
+      <span>[Student Full Name] &middot; [Course Code &amp; Title]</span>
+      <span>Hosted on GitHub Pages</span>
+    </div>
+  </footer>
+</body>
+</html>

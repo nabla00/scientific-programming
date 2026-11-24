@@ -1,50 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Presentation | Scientific Programming</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <header>
-      <div class="wrap">
-        <div class="brand">
-          <h1 class="site-title">Scientific Programming</h1>
-          <p class="course">Beraat Durmaz &middot; 2026-2027 Fall</p>
-        </div>
-        <nav aria-label="Main">
-          <a href="index.html">Home</a>
-          <a href="numerical-problems.html">Numerical Problems</a>
-          <a href="data-and-models.html">Data and Models</a>
-          <a href="presentation.html" aria-current="page">Presentation</a>
-          <a href="code.html">Code</a>
-        </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentation | Course Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- EDIT: Replace with your course code or short site title -->
+      <a class="site-title" href="index.html">[Course Code] Portfolio</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Main</a>
+        <a href="numerical.html">Numerical Problem</a>
+        <a href="data-model.html">Data &amp; Model</a>
+        <a href="presentation.html" aria-current="page">Presentation</a>
+        <a href="code-statement.html">Code &amp; Statement</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <p class="page-kicker">Slides</p>
+      <h1>Presentation</h1>
+      <p class="page-subtitle">Week 10 progress slides and the final course presentation.</p>
+    </section>
+
+    <section aria-labelledby="week10-heading">
+      <h2 id="week10-heading">1. Week 10 Slides</h2>
+      <div class="panel">
+        <p><strong>Title:</strong> [Week 10 Presentation Title]</p>
+        <p><strong>Date:</strong> [YYYY-MM-DD]</p>
+        <p class="placeholder">[Short 1&ndash;2 sentence summary of what the Week 10 deck covers.]</p>
+        <!-- EDIT: Save your PDF as assets/slides/week10-slides.pdf -->
+        <p>
+          <a class="btn-link" href="assets/slides/week10-slides.pdf" target="_blank" rel="noopener">Open Week 10 Slides (PDF)</a>
+          <a class="btn-link" href="assets/slides/week10-slides.pdf" download>Download PDF</a>
+        </p>
       </div>
-    </header>
-    <main>
-      <div class="wrap">
-        <h1>Presentation</h1>
-        <p class="lead">Download the slides for the course presentation.</p>
-        <ul class="items">
-          <!--
-          <li>
-            <h3>Slides</h3>
-            <p>Final presentation shown in class.</p>
-            <div class="links">
-              <a href="presentations/presentation.pdf" download>Download PDF</a>
-              <a href="presentations/presentation.pptx" download>Download PowerPoint</a>
-            </div>
-          </li>
-          -->
-        </ul>
+      <!-- EDIT: Once assets/slides/week10-slides.pdf is uploaded, this iframe renders it directly -->
+      <iframe class="slide-frame" src="assets/slides/week10-slides.pdf" title="Week 10 Slides PDF Viewer">
+        <p>Your browser does not display embedded PDFs. <a href="assets/slides/week10-slides.pdf">Download the Week 10 slides</a>.</p>
+      </iframe>
+    </section>
+
+    <section aria-labelledby="final-heading">
+      <h2 id="final-heading">2. Final Presentation</h2>
+      <div class="panel">
+        <p><strong>Title:</strong> [Final Presentation Title]</p>
+        <p><strong>Date:</strong> [YYYY-MM-DD]</p>
+        <p class="placeholder">[Short 1&ndash;2 sentence summary of the final presentation.]</p>
+        <!-- EDIT: Save your PDF as assets/slides/final-presentation.pdf -->
+        <p>
+          <a class="btn-link" href="assets/slides/final-presentation.pdf" target="_blank" rel="noopener">Open Final Presentation (PDF)</a>
+          <a class="btn-link" href="assets/slides/final-presentation.pdf" download>Download PDF</a>
+        </p>
       </div>
-    </main>
-    <footer>
-      <div class="wrap">Scientific Programming · Beraat Durmaz.</div>
-    </footer>
-  </body>
+      <!-- EDIT: Once assets/slides/final-presentation.pdf is uploaded, this iframe renders it directly -->
+      <iframe class="slide-frame" src="assets/slides/final-presentation.pdf" title="Final Presentation PDF Viewer">
+        <p>Your browser does not display embedded PDFs. <a href="assets/slides/final-presentation.pdf">Download the final presentation</a>.</p>
+      </iframe>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <!-- EDIT: Replace with your name and term -->
+      <span>[Student Full Name] &middot; [Course Code &amp; Title]</span>
+      <span>Hosted on GitHub Pages</span>
+    </div>
+  </footer>
+</body>
 </html>
